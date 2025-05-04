@@ -148,8 +148,18 @@ function pushNoteToArchive(indexNote){
     saveToLocalStorage();
     renderNotes();
     renderArchiveNotes();
-    
+}
 
+function retrieveFromArchive(indexArchiveNote){
+    let note = archiveNotes.splice(indexArchiveNote, 1);
+    notes.push(note[0]);
+
+    let noteTitle = archiveNotesTitles.splice(indexArchiveNote, 1);
+    notesTitles.push(noteTitle[0]);
+
+    saveToLocalStorage();
+    renderNotes();
+    renderArchiveNotes();
 }
 
 function deleteNote(indexTrashNote){

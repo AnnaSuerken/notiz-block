@@ -15,6 +15,7 @@ function getArchiveNoteTemplate(indexArchiveNote){
                 <p>${archiveNotes[indexArchiveNote]}</p>
                     <div>
                         <button onclick="pushArchiveNoteToTrash(${indexArchiveNote})" class="btn">X</button>
+                        <button onclick="retrieveFromArchive(${indexArchiveNote})" class="btn">R</button>
                     </div>
             </div>`;
 }
